@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main()
+{
+ int arr[50][50],r,c,i=0,j=0,k=0;
+ scanf("%d",&r);
+ scanf("%d",&c);
+ for(int i=0;i<r;i++){
+     for(int j=0;j<c;j++){
+         scanf("%d",&arr[i][j]);
+     }
+ }
+ int last_col=c-1;
+ int last_row=r-1;
+ 
+ 
+ for(i=0;i<=last_col;i++){
+     printf("%d",arr[k][i]);
+ }
+ ++k;
+ for(i=k;i<=last_row;i++){
+     printf("%d",arr[i][last_col]);
+ }
+ last_col--;
+ for(i=last_col;i>=0;i--){
+     printf("%d",arr[last_row][i]);
+ }
+ last_row--;
+ for(i=0;i<=last_col;i++){
+     printf("%d",arr[last_row][i]);
+ }
+ 
+ 
+
+    return 0;
+}
